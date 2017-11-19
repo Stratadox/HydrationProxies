@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ca5e5400ba18aaa59c4cbab592de86f1",
-    "content-hash": "cc215740e8e13361901613f74cd72b97",
+    "hash": "8053ddb208e33c32f28b48f8335d59ce",
+    "content-hash": "0d96740106dab308f37c2f4521b52dae",
     "packages": [
         {
             "name": "stratadox/collection-contracts",
@@ -1751,6 +1751,48 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03 07:35:21"
+        },
+        {
+            "name": "stratadox/hydrator",
+            "version": "v1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stratadox/Hydrator.git",
+                "reference": "2ed0d61aa118d1d0c7c12710b28db6fa4d882a4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stratadox/Hydrator/zipball/2ed0d61aa118d1d0c7c12710b28db6fa4d882a4c",
+                "reference": "2ed0d61aa118d1d0c7c12710b28db6fa4d882a4c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "stratadox/hydration": ">=1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=6.3",
+                "rpkamp/fancy-testdox-printer": "^0.1.1",
+                "satooshi/php-coveralls": "^1.0",
+                "stratadox/immutable-collection": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stratadox\\Hydration\\Hydrator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stratadox",
+                    "homepage": "http://www.stratadox.com/"
+                }
+            ],
+            "time": "2017-11-12 23:51:36"
         },
         {
             "name": "symfony/config",
