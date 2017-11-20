@@ -9,12 +9,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Stratadox\\Hydration\\Proxy\\": "src"
+            "Stratadox\\Hydration\\Proxying\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Stratadox\\Hydration\\Proxy\\Test\\": "tests"
+            "Stratadox\\Hydration\\Proxying\\Test\\": "tests"
         }
     },
     "require": {

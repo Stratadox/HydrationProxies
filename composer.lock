@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8053ddb208e33c32f28b48f8335d59ce",
+    "hash": "d139430d79b7cfc06f8f95aa98cab355",
     "content-hash": "0d96740106dab308f37c2f4521b52dae",
     "packages": [
         {
@@ -46,16 +46,16 @@
         },
         {
             "name": "stratadox/hydration",
-            "version": "v1.1",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Stratadox/Hydration.git",
-                "reference": "331468a1670e7eaf9e21c500106b0c02a3e0af83"
+                "reference": "9e9d8b3d81c9f7b741e3e427862439ebb412aadd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Stratadox/Hydration/zipball/331468a1670e7eaf9e21c500106b0c02a3e0af83",
-                "reference": "331468a1670e7eaf9e21c500106b0c02a3e0af83",
+                "url": "https://api.github.com/repos/Stratadox/Hydration/zipball/9e9d8b3d81c9f7b741e3e427862439ebb412aadd",
+                "reference": "9e9d8b3d81c9f7b741e3e427862439ebb412aadd",
                 "shasum": ""
             },
             "require": {
@@ -77,7 +77,7 @@
                     "homepage": "http://www.stratadox.com/"
                 }
             ],
-            "time": "2017-11-12 23:09:23"
+            "time": "2017-11-20 22:54:26"
         },
         {
             "name": "stratadox/specification-interfaces",
