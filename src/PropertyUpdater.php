@@ -7,6 +7,12 @@ namespace Stratadox\Hydration\Proxying;
 use Closure;
 use Stratadox\Hydration\UpdatesTheProxyOwner;
 
+/**
+ * Updates a property with the newly loaded value.
+ *
+ * @package Stratadox\Hydrate
+ * @author Stratadox
+ */
 class PropertyUpdater implements UpdatesTheProxyOwner
 {
     private $owner;
