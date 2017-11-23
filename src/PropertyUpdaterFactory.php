@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Stratadox\Hydration\Proxying;
 
 use Stratadox\Hydration\ProducesOwnerUpdaters;
