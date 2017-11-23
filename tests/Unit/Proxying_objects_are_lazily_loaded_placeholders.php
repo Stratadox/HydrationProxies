@@ -24,7 +24,7 @@ class Proxying_objects_are_lazily_loaded_placeholders extends TestCase
     {
         $proxy = $this->builder->createFor($this, 'proxy');
 
-        $this->assertInstanceOf(Foo::class, $proxy->load());
+        $this->assertInstanceOf(Foo::class, $proxy->__load());
     }
 
     /** @scenario */

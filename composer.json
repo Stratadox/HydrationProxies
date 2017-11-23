@@ -19,7 +19,7 @@
     },
     "require": {
         "php": ">=7.1",
-        "stratadox/hydration": ">=1.0",
+        "stratadox/hydration": ">=1.3",
         "stratadox/collection-contracts": ">=1.0"
     },
     "require-dev": {

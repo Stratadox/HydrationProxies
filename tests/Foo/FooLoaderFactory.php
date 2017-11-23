@@ -9,8 +9,8 @@ use Stratadox\Hydration\UpdatesTheProxyOwner;
 
 class FooLoaderFactory implements ProducesProxyLoaders
 {
-    public function makeLoaderThat(UpdatesTheProxyOwner $whenLoaded) : LoadsProxiedObjects
+    public function makeLoader() : LoadsProxiedObjects
     {
-        return new FooLoader($whenLoaded);
+        return new FooLoader;
     }
 }

@@ -41,7 +41,7 @@ class PropertyUpdater implements UpdatesTheProxyOwner
         return new static($theOwner, $ofTheProperty, $setter);
     }
 
-    public function updateThePropertyWith($theLoadedInstance) : void
+    public function updateWith($theLoadedInstance) : void
     {
         $this->setter->call($this->owner,
             $this->propertyShouldReference,

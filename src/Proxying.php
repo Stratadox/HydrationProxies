@@ -23,7 +23,7 @@ trait Proxying
     private $instance;
 
     /** @return self */
-    public function load()
+    public function __load()
     {
         if (is_null($this->instance)) {
             /** @var Proxy $this */

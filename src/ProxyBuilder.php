@@ -47,9 +47,12 @@ class ProxyBuilder implements ProducesProxies
         $atPosition = null
     ) : Proxy
     {
-        $updatesTheOwner = $this->updaterFactory->makeUpdaterFor($theOwner, $ofTheProperty, $atPosition);
+        $loader = $this->loaderFactory->makeLoader();
+        $loader->attach(
+            $this->updaterFactory->makeUpdaterFor($theOwner, $ofTheProperty, $atPosition)
+        );
         return $this->makeProxy->fromArray([
-            'loader' => $this->loaderFactory->makeLoaderThat($updatesTheOwner)
+            'loader' => $loader
         ]);
     }
 }

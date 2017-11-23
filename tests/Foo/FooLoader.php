@@ -3,21 +3,34 @@
 namespace Stratadox\Hydration\Proxying\Test\Foo;
 
 use Stratadox\Hydration\LoadsProxiedObjects;
-use Stratadox\Hydration\UpdatesTheProxyOwner;
+use Stratadox\Hydration\ObservesProxyLoading;
 
 class FooLoader implements LoadsProxiedObjects
 {
-    private $updater;
+    /** @var ObservesProxyLoading[] */
+    private $observers;
 
-    public function __construct(UpdatesTheProxyOwner $updater)
+    public function attach(ObservesProxyLoading $observer) : void
     {
-        $this->updater = $updater;
+        $this->observers[] = $observer;
+    }
+
+    public function detach(ObservesProxyLoading $observer) : void
+    {
+        unset($this->observers[array_search($observer, $this->observers, true)]);
     }
 
     public function loadTheInstance()
     {
         $instance = new Foo();
-        $this->updater->updateThePropertyWith($instance);
+        $this->tellThemWeMadeThis($instance);
         return $instance;
+    }
+
+    protected function tellThemWeMadeThis($instance)
+    {
+        foreach ($this->observers as $observer) {
+            $observer->updateWith($instance);
+        }
     }
 }

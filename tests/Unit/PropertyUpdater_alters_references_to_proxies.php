@@ -24,7 +24,7 @@ class PropertyUpdater_alters_references_to_proxies extends TestCase
         $updater = PropertyUpdater::for($this, 'alterTheProperty');
 
         $foo = new Foo();
-        $updater->updateThePropertyWith($foo);
+        $updater->updateWith($foo);
 
         $this->assertSame($foo, $this->alterTheProperty);
     }
