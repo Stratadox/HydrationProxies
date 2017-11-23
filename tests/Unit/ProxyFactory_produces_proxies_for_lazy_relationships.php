@@ -16,7 +16,7 @@ use Stratadox\Hydration\Proxying\PropertyUpdaterFactory;
 /**
  * @covers \Stratadox\Hydration\Proxying\ProxyFactory
  */
-class ProxyBuilder_produces_proxies_for_lazy_relationships extends TestCase
+class ProxyFactory_produces_proxies_for_lazy_relationships extends TestCase
 {
     /** @var ProducesProxies */
     private $builder;
