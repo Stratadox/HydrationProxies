@@ -16,7 +16,7 @@ use Stratadox\Hydration\Proxy;
  * @author Stratadox
  * @package Stratadox/Hydrate
  */
-class ProxyBuilder implements ProducesProxies
+class ProxyFactory implements ProducesProxies
 {
     private $makeProxy;
     private $loaderFactory;
@@ -36,7 +36,7 @@ class ProxyBuilder implements ProducesProxies
         Hydrates $proxies,
         ProducesProxyLoaders $loaderFactory,
         ProducesOwnerUpdaters $updaterFactory
-    ) : ProxyBuilder
+    ) : ProxyFactory
     {
         return new static($proxies, $loaderFactory, $updaterFactory);
     }

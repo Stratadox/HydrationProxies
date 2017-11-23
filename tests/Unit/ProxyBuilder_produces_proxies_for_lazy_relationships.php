@@ -6,13 +6,13 @@ use PHPUnit\Framework\TestCase;
 use Stratadox\Hydration\Hydrator\SimpleHydrator;
 use Stratadox\Hydration\ProducesProxies;
 use Stratadox\Hydration\Proxy;
-use Stratadox\Hydration\Proxying\ProxyBuilder;
+use Stratadox\Hydration\Proxying\ProxyFactory;
 use Stratadox\Hydration\Proxying\Test\Foo\FooLoaderFactory;
 use Stratadox\Hydration\Proxying\Test\Foo\FooProxy;
 use Stratadox\Hydration\Proxying\PropertyUpdaterFactory;
 
 /**
- * @covers \Stratadox\Hydration\Proxying\ProxyBuilder
+ * @covers \Stratadox\Hydration\Proxying\ProxyFactory
  */
 class ProxyBuilder_produces_proxies_for_lazy_relationships extends TestCase
 {
@@ -29,7 +29,7 @@ class ProxyBuilder_produces_proxies_for_lazy_relationships extends TestCase
 
     protected function setUp()
     {
-        $this->builder = ProxyBuilder::fromThis(
+        $this->builder = ProxyFactory::fromThis(
             SimpleHydrator::forThe(FooProxy::class),
             new FooLoaderFactory,
             new PropertyUpdaterFactory

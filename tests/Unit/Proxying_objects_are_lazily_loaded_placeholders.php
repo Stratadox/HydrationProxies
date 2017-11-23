@@ -5,7 +5,7 @@ namespace Stratadox\Hydration\Test;
 use PHPUnit\Framework\TestCase;
 use Stratadox\Hydration\Hydrator\SimpleHydrator;
 use Stratadox\Hydration\ProducesProxies;
-use Stratadox\Hydration\Proxying\ProxyBuilder;
+use Stratadox\Hydration\Proxying\ProxyFactory;
 use Stratadox\Hydration\Proxying\Test\Foo\Foo;
 use Stratadox\Hydration\Proxying\Test\Foo\FooLoaderFactory;
 use Stratadox\Hydration\Proxying\Test\Foo\FooProxy;
@@ -38,7 +38,7 @@ class Proxying_objects_are_lazily_loaded_placeholders extends TestCase
 
     protected function setUp()
     {
-        $this->builder = ProxyBuilder::fromThis(
+        $this->builder = ProxyFactory::fromThis(
             SimpleHydrator::forThe(FooProxy::class),
             new FooLoaderFactory,
             new PropertyUpdaterFactory

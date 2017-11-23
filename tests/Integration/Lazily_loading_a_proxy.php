@@ -7,7 +7,7 @@ namespace Stratadox\Hydration\Test;
 use PHPUnit\Framework\TestCase;
 use Stratadox\Hydration\Hydrator\SimpleHydrator;
 use Stratadox\Hydration\ProducesProxies;
-use Stratadox\Hydration\Proxying\ProxyBuilder;
+use Stratadox\Hydration\Proxying\ProxyFactory;
 use Stratadox\Hydration\Proxying\Test\Foo\Foo;
 use Stratadox\Hydration\Proxying\Test\Foo\FooLoaderFactory;
 use Stratadox\Hydration\Proxying\Test\Foo\FooProxy;
@@ -39,7 +39,7 @@ class Lazily_loading_a_proxy extends TestCase
 
     protected function setUp() : void
     {
-        $this->proxyMaker = ProxyBuilder::fromThis(
+        $this->proxyMaker = ProxyFactory::fromThis(
             SimpleHydrator::forThe(FooProxy::class),
             new FooLoaderFactory(),
             new PropertyUpdaterFactory()
