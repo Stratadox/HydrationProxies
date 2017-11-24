@@ -12,6 +12,22 @@ abstract class Loader implements LoadsProxiedObjects
     /** @var ObservesProxyLoading[] */
     private $observers;
 
+    /** @var mixed|object */
+    private $forWhom;
+
+    /** @var string */
+    private $property;
+
+    /** @var string|null */
+    private $position;
+
+    public function __construct($forWhom, string $property, $position = null)
+    {
+        $this->forWhom = $forWhom;
+        $this->property = $property;
+        $this->position = $position;
+    }
+
     public function attach(ObservesProxyLoading $observer) : void
     {
         $this->observers[] = $observer;
@@ -24,7 +40,7 @@ abstract class Loader implements LoadsProxiedObjects
 
     final public function loadTheInstance()
     {
-        $instance = $this->doLoadTheInstanceDearest();
+        $instance = $this->doLoadTheInstanceDearest($this->forWhom, $this->property, $this->position);
         $this->tellThemWeMadeThis($instance);
         return $instance;
     }
@@ -36,5 +52,5 @@ abstract class Loader implements LoadsProxiedObjects
         }
     }
 
-    protected abstract function doLoadTheInstanceDearest();
+    protected abstract function doLoadTheInstanceDearest($forWhom, string $property, $position = null);
 }

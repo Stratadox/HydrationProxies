@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Stratadox\Hydration\Proxying\Test\Foo;
+namespace Stratadox\Hydration\Proxying\Test\Bar;
 
 use Stratadox\Hydration\LoadsProxiedObjects;
 use Stratadox\Hydration\ProducesProxyLoaders;
-use Stratadox\Hydration\UpdatesTheProxyOwner;
 
-class FooLoaderFactory implements ProducesProxyLoaders
+class BarLoaderFactory implements ProducesProxyLoaders
 {
     public function makeLoaderFor(
         $theOwner,
@@ -16,6 +15,6 @@ class FooLoaderFactory implements ProducesProxyLoaders
         $atPosition = null
     ) : LoadsProxiedObjects
     {
-        return new FooLoader($theOwner, $ofTheProperty);
+        return new BarLoader($theOwner, $ofTheProperty);
     }
 }

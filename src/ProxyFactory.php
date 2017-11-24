@@ -47,7 +47,7 @@ class ProxyFactory implements ProducesProxies
         $atPosition = null
     ) : Proxy
     {
-        $loader = $this->loaderFactory->makeLoader();
+        $loader = $this->loaderFactory->makeLoaderFor($theOwner, $ofTheProperty, $atPosition);
         $loader->attach(
             $this->updaterFactory->makeUpdaterFor($theOwner, $ofTheProperty, $atPosition)
         );

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Stratadox\Hydration\Proxying\Test\Foo;
+namespace Stratadox\Hydration\Proxying\Test\Bar;
 
 use Stratadox\Hydration\Proxying\Loader;
 
-class FooLoader extends Loader
+class BarLoader extends Loader
 {
     protected function doLoadTheInstanceDearest($forWhom, string $property, $position = null)
     {
-        return new Foo;
+        return new Bar($forWhom, $property);
     }
 }

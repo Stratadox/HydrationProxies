@@ -17,7 +17,7 @@ class Loader_updates_observers extends TestCase
     function update_with_result_after_loading()
     {
         $observer = new FooLoadingObserver;
-        $loader = new FooLoader;
+        $loader = new FooLoader(null, '');
 
         $loader->attach($observer);
         $foo = $loader->loadTheInstance();
@@ -29,7 +29,7 @@ class Loader_updates_observers extends TestCase
     function do_not_update_before_loading()
     {
         $observer = new FooLoadingObserver;
-        $loader = new FooLoader;
+        $loader = new FooLoader(null, '');
 
         $loader->attach($observer);
 
@@ -40,7 +40,7 @@ class Loader_updates_observers extends TestCase
     function do_not_update_if_detached()
     {
         $observer = new FooLoadingObserver;
-        $loader = new FooLoader;
+        $loader = new FooLoader(null, '');
 
         $loader->attach($observer);
         $loader->detach($observer);
