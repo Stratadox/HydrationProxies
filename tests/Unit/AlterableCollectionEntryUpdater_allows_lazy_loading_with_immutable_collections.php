@@ -9,7 +9,6 @@ use Stratadox\Hydration\Proxying\AlterableCollectionEntryUpdater;
 use Stratadox\Hydration\Proxying\Test\Foo\Foo;
 use Stratadox\Hydration\Proxying\Test\Foo\FooProxy;
 use Stratadox\Hydration\Proxying\Test\Foo\Foos;
-use Stratadox\Hydration\Proxying\UnexpectedPropertyType;
 use Stratadox\Hydration\UnmappableInput;
 
 /**
