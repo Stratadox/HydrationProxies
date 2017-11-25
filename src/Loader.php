@@ -10,7 +10,7 @@ use Stratadox\Hydration\ObservesProxyLoading;
 abstract class Loader implements LoadsProxiedObjects
 {
     /** @var ObservesProxyLoading[] */
-    private $observers;
+    private $observers = [];
 
     /** @var mixed|object */
     private $forWhom;
