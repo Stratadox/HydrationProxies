@@ -26,6 +26,17 @@ class Loader_updates_observers extends TestCase
     }
 
     /** @scenario */
+    function call_nobody_when_unobserved()
+    {
+        $observer = new FooLoadingObserver;
+        $loader = new FooLoader(null, '');
+
+        $loader->loadTheInstance();
+
+        $this->assertNull($observer->instance());
+    }
+
+    /** @scenario */
     function do_not_update_before_loading()
     {
         $observer = new FooLoadingObserver;
