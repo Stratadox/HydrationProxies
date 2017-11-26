@@ -8,7 +8,7 @@ use Closure;
 use Stratadox\Hydration\UpdatesTheProxyOwner;
 
 /**
- * Updates a property with the newly loaded value.
+ * Updates an array entry with the newly loaded value.
  *
  * @package Stratadox\Hydrate
  * @author Stratadox

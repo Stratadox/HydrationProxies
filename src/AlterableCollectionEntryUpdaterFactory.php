@@ -8,7 +8,7 @@ use Stratadox\Hydration\ProducesOwnerUpdaters;
 use Stratadox\Hydration\UpdatesTheProxyOwner;
 
 /**
- * Produces @see PropertyUpdater instances.
+ * Produces @see AlterableCollectionEntryUpdater instances.
  *
  * @package Stratadox\Hydrate
  * @author Stratadox

@@ -9,7 +9,7 @@ use Stratadox\Collection\Alterable;
 use Stratadox\Hydration\UpdatesTheProxyOwner;
 
 /**
- * Updates a property with the newly loaded value.
+ * Updates a collection to include the newly loaded value.
  *
  * @package Stratadox\Hydrate
  * @author Stratadox
