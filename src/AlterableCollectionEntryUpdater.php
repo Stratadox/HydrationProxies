@@ -34,7 +34,7 @@ class AlterableCollectionEntryUpdater implements UpdatesTheProxyOwner
         {
             $original = $this->$property;
             if (!$original instanceof Alterable) {
-                throw UnexpectedPropertyType::expectedThe(Alterable::class, $this, $property, $original);
+                throw UnexpectedPropertyType::expectedThe(Alterable::class, $this, $original, $property);
             }
             $this->$property = $original->change($position, $value);
         };

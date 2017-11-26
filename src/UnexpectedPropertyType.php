@@ -14,8 +14,8 @@ class UnexpectedPropertyType extends InvalidArgumentException implements Unmappa
     public static function expectedThe(
         string $interface,
         $object,
-        string $property,
-        $actual
+        $actual,
+        string $property
     ) : UnmappableInput
     {
         return new static(sprintf(
