@@ -40,7 +40,7 @@ abstract class Loader implements LoadsProxiedObjects
 
     final public function loadTheInstance()
     {
-        $instance = $this->doLoadTheInstanceDearest($this->forWhom, $this->property, $this->position);
+        $instance = $this->doLoad($this->forWhom, $this->property, $this->position);
         $this->tellThemWeMadeThis($instance);
         return $instance;
     }
@@ -52,5 +52,5 @@ abstract class Loader implements LoadsProxiedObjects
         }
     }
 
-    protected abstract function doLoadTheInstanceDearest($forWhom, string $property, $position = null);
+    protected abstract function doLoad($forWhom, string $property, $position = null);
 }

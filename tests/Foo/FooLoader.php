@@ -8,7 +8,7 @@ use Stratadox\Hydration\Proxying\Loader;
 
 class FooLoader extends Loader
 {
-    protected function doLoadTheInstanceDearest($forWhom, string $property, $position = null)
+    protected function doLoad($forWhom, string $property, $position = null)
     {
         return new Foo;
     }
