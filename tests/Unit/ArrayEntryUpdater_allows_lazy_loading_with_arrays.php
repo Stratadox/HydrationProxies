@@ -17,7 +17,7 @@ class ArrayEntryUpdater_allows_lazy_loading_with_arrays extends TestCase
     private $alterTheEntry;
 
     /** @scenario */
-    function updating_private_immutable_collection_of_the_owner()
+    function updating_private_array_of_the_owner()
     {
         $this->alterTheEntry = [
             new FooProxy(),
